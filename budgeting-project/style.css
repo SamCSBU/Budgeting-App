@@ -1,7 +1,7 @@
 body {
     color: white;
     font-family: Arial;
-    background-image: linear-gradient(#c7c7c7, #5c5c5c);
+    background-image: linear-gradient(#86a8cd, #3476bc);
     background-size: cover;
     background-attachment: fixed;
 }
@@ -59,6 +59,7 @@ transform: scale(1.1)
 
 label {
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    
 }
 
 input {
@@ -66,18 +67,24 @@ input {
     border: 1px solid black;
     height: 30px;
     width: 100px;
+    
+}
+
+.question {
+    flex: 1;
 }
 
 form {
     text-align: center;
-    height: 710px;
-    width: 30%;
+    height: 280px;
+    width: 60%;
     background-image: linear-gradient(#358fd9, #134d77);
     box-shadow: 0 8px 12px #0000001a;
     padding: 30px 20px;
     border-radius: 20px;
     margin: 0 auto;
     display: block;
+    border: 3px solid black;
 }
 
 
@@ -111,7 +118,9 @@ form {
     margin-bottom: 10px;
 }
 
-
+.question-block {
+    display: flex;
+}
 
 #submit {
     display: block;

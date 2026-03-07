@@ -2,14 +2,14 @@ const form = document.getElementById("my-form");
 form.addEventListener('submit', function (event) {
 
 const income = document.getElementById("annual-income");
-const rent = document.getElementById("rent");
-const utilities = document.getElementById("utilities");
+const rent = document.getElementById("rent");   //fixed
+const utilities = document.getElementById("utilities");     //fixed
 const vacationTime = document.getElementById("vacation-time");
 const vacationCost = document.getElementById("vacation-cost");
-const streaming = document.getElementById("streaming");
-const groceries = document.getElementById("groceries");
+const streaming = document.getElementById("streaming");     //fixed
+const groceries = document.getElementById("groceries");     //variable
 const bigPurchase = document.getElementById("big-purchase");
-const personal = document.getElementById("personal");
+const personal = document.getElementById("personal");       //variable
 // const geoArea = document.querySelector('input[name="class"]:checked');
 
 const money = income - (rent+utilities+(4*groceries)+streaming+(4*personal))*12;
@@ -21,6 +21,10 @@ const needsSpending = rent + utilities + 4 * groceries;
 needsSpending.toFixed(2);
 const recNeedsSpending = income * 0.5;
 recNeedsSpending.toFixed(2);
+
+if(needsSpending > recNeedsSpending){
+    
+}
 
 const wantSpending = streaming + (4*personal);
 wantSpending.toFixed(2);
