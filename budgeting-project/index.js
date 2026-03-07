@@ -1,5 +1,9 @@
 const form = document.getElementById("my-form");
-form.addEventListener('submit', function (event) {
+export const testValue = 100
+form.addEventListener('submit',function (event)  {
+    event.preventDefault();
+    window.location.href = "analysis.html";
+   
 
 const income = document.getElementById("annual-income");
 const rent = document.getElementById("rent");   //fixed
@@ -38,10 +42,9 @@ recSaving.toFixed(2);
 
 const vacationSaving = vacationCost / vacationTime;
 
-
-
-
 const food = 0
 const personalPurchases = 0
 
-});
+
+
+ });

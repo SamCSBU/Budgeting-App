@@ -5,7 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Budgeting Website - Home</title>
     <link rel="stylesheet" href="style.css">
-    <script src = "index.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com" rel="stylesheet">
   </head>
   <body>
     <h1 class = "title">Budgeting Site</h1>
@@ -23,12 +25,12 @@
               </div>
               <div class = "question">
         <label for = "utilities">Monthly Utilities</label>
-        <input id = "utilities" type="text" name = "utilities" min = "0" max = "100000000">
+        <input id = "utilities" type="number" name = "utilities" min = "0" max = "100000000">
                 </div>
         </div>
         <div class = "question-block">
           <div class = "question">
-        <label for = "streaming">Monthly cost of Streaming Services</label>
+        <label for = "streaming">Monthly cost of Streaming</label>
         <input id = "streaming" type="number" name = "streaming" min = "0" max = "100000000">
             </div>
             <div class = "question">
@@ -50,7 +52,7 @@
         <input id = "big-purchase" type="number" name = "big-purchase" min = "0" max ="100000000">
               </div>
               <div class = "question">
-        <label for = "personal">Average Weekly Personal Spending</label>
+        <label for = "personal">Weekly Personal Spending</label>
         <input id = "personal" type = "number" name = "personal" min = "0" max = "100000000">
                 </div>
         </div>
@@ -72,6 +74,6 @@
         <button id = "submit" type="submit" name = "submit">Submit</button>
     </form>
 
-
+    <script src = "index.js" type = "module"></script>
   </body>
 </html>

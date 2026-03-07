@@ -1,9 +1,18 @@
 body {
     color: white;
     font-family: Arial;
-    background-image: linear-gradient(#86a8cd, #3476bc);
+    background-image: linear-gradient(#3f8e22, #24558a);
     background-size: cover;
     background-attachment: fixed;
+}
+
+#analysis-body {
+    color: white;
+    font-family: Arial;
+    background-image: linear-gradient(#29ad7e, #3476bc);
+    background-size: cover;
+    background-attachment: fixed;
+
 }
 
 html, body {
@@ -14,77 +23,94 @@ html, body {
 }
 
 
-h1 {
+.title {
+    font-family: 'Roboto';
+    font-weight: 200;
     color: rgb(255, 255, 255);  
     text-align: center;
-    font-size: 3rem;
-}
+    font-size: 4rem;
+    margin-top: 30px;
+    margin-bottom: 20px;
 
-.title {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 #submit {
-padding: 10px 20px;
-border-radius: 50px;
-border: 2px solid black;
-font-size: 1.15rem;
+padding: 15px 30px;
+border-radius: 20px;
+border: 3px solid black;
+font-size: 1.5rem;
 background-color: rgb(255, 255, 255);
 transition: all 0.3s ease;
 }
 
 #submit:hover, #back-button:hover {
 cursor: pointer;
-transform: scale(1.1)
+transform: scale(1.1);
+background-color: rgb(224, 222, 222);
 }
 
 #back-button {
     cursor: pointer;
-    height: 20px;
-    width:50px;
+    padding: 15px 30px;
     background-color: white;
     color: black;
     padding: 20px;
-    border-radius: 50px;
+    border-radius: 20px;
     border: 2px solid black;
     text-decoration: none;
     position: absolute;
     top: 30px;
-    text-align: center;
-    align-items: center;
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     left: 20px;
     transition: all 0.3s ease;
 }
 
+#submit, #back-button {
+    font-family: 'Roboto';
+}
+
 label {
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 1.35rem;
+    display: block;
+    padding: 15px 0;
 }
 
 input {
     border-radius: 20px;
-    border: 1px solid black;
-    height: 30px;
-    width: 100px;
-    
+    border: 3px solid black;
+    height: 50px;
+    width: 120px;
+    font-size: 1.4rem;
+    text-align: center;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; 
+    display: block;
+}
+
+input:focus {
+    outline: none;
 }
 
 .question {
     flex: 1;
+    margin-bottom: 10px;
 }
 
 form {
     text-align: center;
-    height: 280px;
-    width: 60%;
-    background-image: linear-gradient(#358fd9, #134d77);
-    box-shadow: 0 8px 12px #0000001a;
+    height: auto;
+    width: 65%;
+    background-image: linear-gradient( #14963d, #23679f);
+    box-shadow: 0 8px 40px #0000001a;
     padding: 30px 20px;
     border-radius: 20px;
     margin: 0 auto;
+    margin-top: -20px;
     display: block;
     border: 3px solid black;
+    align-self: center;
+    position: relative;
+    top: 5%;
 }
 
 
@@ -105,6 +131,7 @@ form {
     box-shadow: 10px 12px 12px rgba(0, 0, 0, 0.1);
     transition: all 0.3s ease;
     padding: 10px 20px;
+    border: 3px solid black;
 }
 
 .widget:hover {
@@ -123,6 +150,6 @@ form {
 }
 
 #submit {
-    display: block;
     margin: 20px auto;
+    
 }

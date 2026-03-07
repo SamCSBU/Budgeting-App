@@ -5,15 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Budgeting Website - Analysis</title>
     <link rel="stylesheet" href="style.css">
-    <script src = "index.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> <!--this imports chart, next line makes myChart (chart name)-->
+    
   </head>
-  <body>
-    <h1>Analysis</h1>
+  <body id = "analysis-body">
+    <h1 class = "title">Analysis</h1>
 
 
     <a id = "back-button" href = "index.html">Home</a>
     
-    <div class = "output">
+  <!-- <div class = "output">
       <div class = "widget" id = "food">
         <h2>Food</h2>
         <h3>Recommended spend per month: </h3>
@@ -30,8 +31,11 @@
         <h2>Personal Purchases</h2>
         <h3>Recommended spend per month: </h3>
       </div>
-
+      
     </div>
+-->
+      <canvas id="myChart" width = "400" height = "600"></canvas> 
 
+      <script src = "analysis.js" type = "module"></script>
  </body>
 </html>
