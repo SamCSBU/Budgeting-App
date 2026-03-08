@@ -191,9 +191,10 @@ form {
     width: 30%;
     text-align: center;
     vertical-align:  center;
-    background-image: linear-gradient(#d72222,#69050c);
+    background-color: #605454;
     border-radius: 20px;
     border: 2px solid black;
     box-shadow: 0 0 4px 8px rgba(0, 0, 0, 0.1);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
