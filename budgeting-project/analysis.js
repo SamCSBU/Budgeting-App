@@ -1,4 +1,17 @@
-import {testValue} from './index.js'
+const data = JSON.parse(localStorage.getItem("formData"));
+const needs = data.needs;
+const wants = data.wants;
+const savings = data.savings;
+const groceries = data.changeGroceries;
+const personal = data.changePersonal;
+const save = data.changeSaving;
+const recNeeds = data.recNeeds;
+const recWants = data.recWants;
+const recSavings = data.recSavings;
+
+document.getElementById("groceries-output").innerText = groceries;
+document.getElementById("personal-output").innerText = personal;
+document.getElementById("saving-output").innerText = save;
 
 const ctx = document.getElementById('myChart').getContext('2d');
     new Chart(ctx, {
@@ -6,13 +19,84 @@ const ctx = document.getElementById('myChart').getContext('2d');
         data: {
             labels: ['Needs', 'Wants', 'Savings'],
             datasets: [{
-                label: 'Test Chart',
-                data: [testValue, 19, 7],
+                label:'',
+                data: [needs, wants, savings],
                 backgroundColor: [
                     'rgba(255, 99, 132, 0.6)',
-                    'rgba(54, 162, 235, 0.6)',
-                    'rgba(75, 192, 192, 0.6)'
+                    'rgba(157, 212, 249, 0.6)',
+                    'rgba(27, 144, 66, 0.6)'
                 ]
             }]
+        },
+        options: {
+               plugins: {
+        legend: {
+            display: false
         }
+    },
+            maintainAspectRatio: false,
+        scales: {
+            x: {
+                ticks: {
+                    font: {
+                        size: 20
+                    },
+                    color: 'white'
+                }
+            },
+            y: {
+                ticks: {
+                    font: {
+                        size: 16
+                    },
+                    color: 'white'
+                }
+            }
+        }
+      
+}
+    });
+    
+    const ctx2 = document.getElementById('myChart-2').getContext('2d');
+    new Chart(ctx2, {
+        type: 'bar',
+        data: {
+            labels: ['Needs', 'Wants', 'Savings'],
+            datasets: [{
+                label: 'Test Chart',
+                data: [recNeeds, recWants, recSavings],
+                backgroundColor: [
+                    'rgba(255, 99, 132, 0.6)',
+                    'rgba(157, 212, 249, 0.6)',
+                    'rgba(1, 129, 44, 0.6)'
+                ]
+            }]
+        },
+        options: {
+                     plugins: {
+        legend: {
+            display: false
+        }
+    },
+
+            maintainAspectRatio: false,
+        scales: {
+            x: {
+                ticks: {
+                    font: {
+                        size: 20
+                    },
+                    color: 'white'
+                }
+            },
+            y: {
+                ticks: {
+                    font: {
+                        size: 16
+                    },
+                    color: 'white'
+                }
+            }
+        }
+    }
     });

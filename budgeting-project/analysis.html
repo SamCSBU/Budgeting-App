@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Budgeting Website - Analysis</title>
     <link rel="stylesheet" href="style.css">
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> <!--this imports chart, next line makes myChart (chart name)-->
     
   </head>
   <body id = "analysis-body">
@@ -34,8 +33,26 @@
       
     </div>
 -->
-      <canvas id="myChart" width = "400" height = "600"></canvas> 
+    <div class = "chart-row">
+    <div class = "chart-box">
+        <div class = "chart-label">Current Budget</div>
+      <canvas id="myChart" width = "300" height = "400"></canvas> 
+      
+    </div>
 
+    <div class = "chart-box">
+        <div class = "chart-label">Recommened Budget</div>
+      <canvas id="myChart-2" width = "300" height = "400"></canvas> 
+      
+    </div>
+    </div>
+
+    <div class = "recChanges">
+      <p id = "groceries-output"></p>
+      <p id = "personal-output"></p>
+      <p id = "saving-output"></p>
+    </div>
+      <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
       <script src = "analysis.js" type = "module"></script>
  </body>
 </html>
