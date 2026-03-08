@@ -102,7 +102,7 @@ else{
 // current monthly budget values: groceries * 4, rent, utilities, vacationSaving, streaming, bigPurchase, personal * 4
 let saveVacation = "";
 if(isNaN(vacationCost) && isNaN(vacationTime)){
-    saveVacation = "You are not currently saving for a vacation.";
+    saveVacation = "You are not currently saving for a big purchase.";
 }
 else if(isNaN(vacationCost)){
     saveVacation = "Cannot calculate recommended saving without a cost.";
@@ -113,7 +113,7 @@ else if(isNaN(vacationTime)){
 else{
     let vacationSaving = vacationCost / (vacationTime * 4);
     vacationSaving = parseFloat(vacationSaving.toFixed(2));
-    saveVacation = "If possible, try and save $" + vacationSaving + " per week for your upcoming vacation.";
+    saveVacation = "If possible, try and save $" + vacationSaving + " per week for your upcoming purchase.";
 }
 
 

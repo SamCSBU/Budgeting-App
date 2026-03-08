@@ -1,14 +1,15 @@
 body {
     color: white;
-    font-family: Arial;
+    font-family: 'Roboto';
+    font-weight: 300;
     background-image: linear-gradient(#3f8e22, #24558a);
     background-size: cover;
     background-attachment: fixed;
 }
 
 #analysis-body {
+    font-family: 'Roboto';
     color: white;
-    font-family: Arial;
     background-image: linear-gradient(#29ad7e, #3476bc);
     background-size: cover;
     background-attachment: fixed;
@@ -24,8 +25,8 @@ html, body {
 
 
 .title {
-    font-family: 'Roboto';
-    font-weight: 200;
+   
+    font-weight: 350;
     color: rgb(255, 255, 255);  
     text-align: center;
     font-size: 4rem;
@@ -65,13 +66,11 @@ background-color: rgb(224, 222, 222);
     transition: all 0.3s ease;
 }
 
-#submit, #back-button {
-    font-family: 'Roboto';
-}
+
 
 label {
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    font-size: 1.35rem;
+    font-weight: 300;
+    font-size: 1.45rem;
     display: block;
     padding: 15px 0;
 }
@@ -83,7 +82,8 @@ input {
     width: 120px;
     font-size: 1.4rem;
     text-align: center;
-    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; 
+    
+    font-weight: 300;
     display: block;
 }
 
@@ -98,11 +98,11 @@ input:focus {
 
 form {
     text-align: center;
-    height: 527px;
+    height: auto;
     width: 75%;
     background-image: linear-gradient( #14963d, #23679f);
     box-shadow: 0 8px 40px #0000001a;
-    padding: 30px 20px;
+    padding: 20px;
     border-radius: 20px;
     margin: 0 auto;
     margin-top: -20px;
@@ -170,9 +170,11 @@ form {
 }
 
 .chart-box {
-    margin: 0 auto;
-    height: 400px;
-    width: 400px;
+    flex-shrink: 0;
+    height: 30%;
+    width: 30%;
+    max-width: 400px;
+    max-height: 400px;
 
 }
 #myChart, #myChart-2 {
@@ -185,11 +187,13 @@ form {
     font-size: 2rem;
     text-align: center;
     margin-bottom: 15px;
-    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
 .chart-row {
     display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 70px;
 }
 
 .recChanges {
@@ -216,17 +220,23 @@ form {
     background-color: #605454;
     border-radius: 20px;
     border: 2px solid black;
-    box-shadow: 0 0 4px 4px rgba(0, 0, 0, 0.1);
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.recChanges p:hover {
+    transform: scale(1.1);
 }
 
 #budget-table {
     width: 400px;
+    max-width: 400px;
     height: 400px;
-    background-color: rgb(74,83,98);
-    padding: 15px;
+    max-height: 400px;
+    background-color: black;
+    padding: 0px;
     border-radius: 20px;
-    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    border: 3px solid black;
     position: relative;
     top: 50px;
     margin-top: -50px;
@@ -234,10 +244,13 @@ form {
 
 .values {
     text-align: center;
+    font-size: 1.1rem;
+    font-weight: 600;
 }
 
 td:not(.values) {
     text-align: center;
+    font-size: 1.2rem;
 }
 
 #vacation-output {
@@ -253,12 +266,12 @@ td, th {
 }
 
 th {
-    font-size: 1.1rem;
-    font-weight: 700;
+    font-size: 1.2rem;
+    font-weight: 450;
 }
 
 td {
-    font-weight: 400;
+    font-weight: 300;
 }
 
 tr:first-child td:first-child, tr:first-child th:first-child {
@@ -275,6 +288,13 @@ tr:last-child td:first-child {
 
 tr:last-child td:last-child {
     border-radius: 0 0 15px 0;
+}
+
+.optional {
+    font-size: 0.9rem;
+    margin-top: -10px;
+    font-weight: 250;
+    color:#dad6d6;
 }
 
 

@@ -3,14 +3,14 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Budgeting Website - Home</title>
+    <title>Spending Habits Analyzer - Home</title>
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;200;300;400;700&display=swap" rel="stylesheet">
   </head>
   <body>
-    <h1 class = "title">Budgeting Site</h1>
+    <h1 class = "title">Spending Habits Analyzer</h1>
 
     <form action = "analysis.html" id ="my-form">
       <div class = "questions">
@@ -21,37 +21,39 @@
             </div>
             <div class = "question">
         <label for = "rent">Monthly Rent/Mortage</label>
-        <input id = "rent" type="number" name = "rent" min = "0" max = "100000000" >
+        <input id = "rent" type="number" name = "rent" min = "0" max = "100000000" required>
               </div>
               <div class = "question">
         <label for = "utilities">Monthly Utilities + Car Payment</label>
-        <input id = "utilities" type="number" name = "utilities" min = "0" max = "100000000">
+        <input id = "utilities" type="number" name = "utilities" min = "0" max = "100000000" required>
                 </div>
         </div>
         <div class = "question-block">
           <div class = "question">
         <label for = "streaming">Monthly cost of Streaming</label>
-        <input id = "streaming" type="number" name = "streaming" min = "0" max = "100000000">
+        <input id = "streaming" type="number" name = "streaming" min = "0" max = "100000000" required>
             </div>
             <div class = "question">
         <label for = "groceries">Weekly cost of Groceries</label>
-        <input id = "groceries" type="number" name = "groceries" min = "0" max = "100000000">
+        <input id = "groceries" type="number" name = "groceries" min = "0" max = "100000000" required>
               </div>
            
            <div class = "question">
         <label for = "personal">Weekly Personal Spending</label>
-        <input id = "personal" type = "number" name = "personal" min = "0" max = "100000000">
+        <input id = "personal" type = "number" name = "personal" min = "0" max = "100000000" required>
                 </div>
               
               
         </div>
         <div class = "question-block" id = "vacation-block">
           <div class = "question">
-        <label for = "vacation-time">Months Before Next Vacation</label>
-        <input id = "vacation-time" type="number" name = "vacation-time" min = "0" max = "100000000">
+        <label for = "vacation-time">Months Before Next Big Purchase</label>
+        <div class = "optional">Optional</div>
+        <input id = "vacation-time" type="number" name = "vacation-time" min = "1" max = "100000000">
                 </div>
           <div class = "question">
-        <label for = "vacation-cost">Estimated Cost of Vacation</label>
+        <label for = "vacation-cost">Estimated Cost of Big Purchase</label>
+        <div class = "optional">Optional</div>
         <input id = "vacation-cost" type="number" name = "vacation-cost" min = "0" max = "100000000">
             </div>
 
