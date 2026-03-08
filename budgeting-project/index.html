@@ -17,14 +17,14 @@
         <div class = "question-block">
           <div class = "question">
         <label for = "annual-income">Annual Income</label>
-        <input id = "annual-income" type="number" name = "annual-income" min = "0" max = "100000000">
+        <input id = "annual-income" type="number" name = "annual-income" min = "0" max = "100000000" required>
             </div>
             <div class = "question">
         <label for = "rent">Monthly Rent/Mortage</label>
-        <input id = "rent" type="number" name = "rent" min = "0" max = "100000000">
+        <input id = "rent" type="number" name = "rent" min = "0" max = "100000000" >
               </div>
               <div class = "question">
-        <label for = "utilities">Monthly Utilities</label>
+        <label for = "utilities">Monthly Utilities + Car Payment</label>
         <input id = "utilities" type="number" name = "utilities" min = "0" max = "100000000">
                 </div>
         </div>
@@ -37,24 +37,29 @@
         <label for = "groceries">Weekly cost of Groceries</label>
         <input id = "groceries" type="number" name = "groceries" min = "0" max = "100000000">
               </div>
-              <div class = "question">
+           
+           <div class = "question">
+        <label for = "personal">Weekly Personal Spending</label>
+        <input id = "personal" type = "number" name = "personal" min = "0" max = "100000000">
+                </div>
+              
+              
+        </div>
+        <div class = "question-block" id = "vacation-block">
+          <div class = "question">
         <label for = "vacation-time">Months Before Next Vacation</label>
         <input id = "vacation-time" type="number" name = "vacation-time" min = "0" max = "100000000">
                 </div>
-        </div>
-        <div class = "question-block">
           <div class = "question">
         <label for = "vacation-cost">Estimated Cost of Vacation</label>
         <input id = "vacation-cost" type="number" name = "vacation-cost" min = "0" max = "100000000">
             </div>
-            <div class = "question">
+
+  
+             <!-- <div class = "question">
         <label for = "big-purchase">Upcoming Big Purchases This Month</label>
         <input id = "big-purchase" type="number" name = "big-purchase" min = "0" max ="100000000">
-              </div>
-              <div class = "question">
-        <label for = "personal">Weekly Personal Spending</label>
-        <input id = "personal" type = "number" name = "personal" min = "0" max = "100000000">
-                </div>
+              </div> -->
         </div>
        </div>
           

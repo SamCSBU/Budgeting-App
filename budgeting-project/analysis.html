@@ -35,7 +35,7 @@
 -->
     <div class = "chart-row">
     <div class = "chart-box">
-        <div class = "chart-label">Current Budget</div>
+        <div class = "chart-label">Current Monthly Budget</div>
       <canvas id="myChart" width = "300" height = "400"></canvas> 
       
     </div>
@@ -45,13 +45,51 @@
       <canvas id="myChart-2" width = "300" height = "400"></canvas> 
       
     </div>
+    <div class = "chart-box">
+      <div class = "chart-label">Budget Table</div>
+      <table id = "budget-table">
+      <tr>
+        <th>Category</th>
+        <th>Monthly Amount</th>
+      </tr>
+      <tr>
+        <td>Income</td>
+        <td id = "monthly-spending" class = "values"></td>
+      </tr>
+      <tr>
+        <td>Rent</td>
+        <td id = "monthly-rent" class = "values"></td>
+      </tr>
+      <tr>
+        <td>Utilities</td>
+        <td id = "monthly-utilities" class = "values"></td>
+      </tr>
+      <tr>
+        <td>Streaming</td>
+        <td id = "monthly-streaming" class = "values"></td>
+      </tr>
+      <tr>
+        <td>Groceries</td>
+        <td id = "monthly-groceries" class = "values"></td>
+      </tr>
+      <tr>
+        <td>Personal Spending</td>
+        <td id = "personal-spending" class = "values"></td>
+      </tr>
+      </table>
+
+    </div>
     </div>
 
     <div class = "recChanges">
       <p id = "groceries-output"></p>
       <p id = "personal-output"></p>
       <p id = "saving-output"></p>
+      <p id = "vacation-output"></p>
     </div>
+    
+    
+
       <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
       <script src = "analysis.js" type = "module"></script>
  </body>

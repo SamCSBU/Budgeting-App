@@ -8,10 +8,27 @@ const save = data.changeSaving;
 const recNeeds = data.recNeeds;
 const recWants = data.recWants;
 const recSavings = data.recSavings;
+const savingVacation = data.savingVacation;
+const monthlyIncome = data.monthlyIncome;
+const rent = data.rent;
+const utilities = data.utilities;
+const streaming = data.streaming;
+const monthlyGroceries = data.groceries;
+const personalMonthly = data.personal;
 
 document.getElementById("groceries-output").innerText = groceries;
 document.getElementById("personal-output").innerText = personal;
 document.getElementById("saving-output").innerText = save;
+document.getElementById("vacation-output").innerText = savingVacation;
+
+
+// chart values
+document.getElementById("monthly-spending").innerText = '$' + monthlyIncome;
+document.getElementById("monthly-rent").innerText = '$' + rent;
+document.getElementById("monthly-utilities").innerText = '$' + utilities;
+document.getElementById("monthly-streaming").innerText = '$' + streaming;
+document.getElementById("monthly-groceries").innerText = '$' + monthlyGroceries;
+document.getElementById("personal-spending").innerText = '$' + personalMonthly;
 
 const ctx = document.getElementById('myChart').getContext('2d');
     new Chart(ctx, {
@@ -30,6 +47,13 @@ const ctx = document.getElementById('myChart').getContext('2d');
         },
         options: {
                plugins: {
+                tooltip: {
+            callbacks: {
+                label: function(context) {
+                    return '$' + context.parsed.y;
+                }
+            }
+                        },
         legend: {
             display: false
         }
@@ -38,6 +62,7 @@ const ctx = document.getElementById('myChart').getContext('2d');
         scales: {
             x: {
                 ticks: {
+                    
                     font: {
                         size: 20
                     },
@@ -46,6 +71,8 @@ const ctx = document.getElementById('myChart').getContext('2d');
             },
             y: {
                 ticks: {
+                    callback: function(value) {
+                    return '$' + value; },
                     font: {
                         size: 16
                     },
@@ -63,7 +90,7 @@ const ctx = document.getElementById('myChart').getContext('2d');
         data: {
             labels: ['Needs', 'Wants', 'Savings'],
             datasets: [{
-                label: 'Test Chart',
+                label: '',
                 data: [recNeeds, recWants, recSavings],
                 backgroundColor: [
                     'rgba(255, 99, 132, 0.6)',
@@ -74,6 +101,13 @@ const ctx = document.getElementById('myChart').getContext('2d');
         },
         options: {
                      plugins: {
+                        tooltip: {
+            callbacks: {
+                label: function(context) {
+                    return '$' + context.parsed.y;
+                }
+            }
+                        },
         legend: {
             display: false
         }
@@ -91,6 +125,8 @@ const ctx = document.getElementById('myChart').getContext('2d');
             },
             y: {
                 ticks: {
+                    callback: function(value) {
+                    return '$' + value; },
                     font: {
                         size: 16
                     },
